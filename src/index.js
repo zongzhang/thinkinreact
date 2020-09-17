@@ -2,19 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const user = {
-    firstName: 'Hello',
-    lastName: 'World',
+//元素 不可变
+// const element2 = <h1>Hello, world2</h1>;
+//
+// ReactDOM.render(element2, document.getElementById('root2'));
+
+
+function tick() {
+    const element = (
+        <div>
+            <h1>hello,world</h1>
+            <h2>it is {new Date().toLocaleTimeString()}</h2>
+        </div>
+    )
+    ReactDOM.render(element, document.getElementById('root'));
 }
 
-function formatName(user) {
-    return user.firstName + ' ' + user.lastName;
-}
+setInterval(tick, 1000);
 
-const element = (
-    <h1>haha, {formatName(user)}</h1>
-)
-ReactDOM.render(
-    element,
-    document.getElementById('root')
-);
+
+
