@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const user = {
-    firstName: 'harper',
-    lastName: 'perez',
+    firstName: 'Hello',
+    lastName: 'World',
 }
 
 function formatName(user) {
@@ -12,7 +12,7 @@ function formatName(user) {
 }
 
 const element = (
-    <h1>Hello, {formatName(user)}</h1>
+    <h1>haha, {formatName(user)}</h1>
 )
 ReactDOM.render(
     element,
