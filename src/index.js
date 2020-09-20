@@ -1,7 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const element = <h1>Hello, world</h1>;
+function Example() {
+    // 声明一个叫 "count" 的 state 变量
+    const [count, setCount] = useState(0);
 
-ReactDOM.render(element, document.getElementById('root'));
+    return (
+        <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>
+                Click me
+            </button>
+            <button onClick={() => setCount(count - 1)}>
+                Click me
+            </button>
+        </div>
+    );
+}
+
+
+ReactDOM.render(<Example/>, document.getElementById('root'));
